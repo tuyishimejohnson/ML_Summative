@@ -62,9 +62,9 @@ def predict(data: InputData):
     # Convert input data to the required format for the model
     input_data = [convertRequestToModelValue(data.dict())]
 
-    # Make prediction
+    # Making prediction
     prediction = model.predict(input_data)
     print(prediction[0])
 
-    # Return the prediction as a response
+    # Returning the prediction as a response
     return {"prediction": round(prediction[0], 0)}
